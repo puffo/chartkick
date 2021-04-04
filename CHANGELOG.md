@@ -1,3 +1,7 @@
+## 4.0.0 (unreleased)
+
+- Removed support for Ruby < 2.6
+
 ## 3.4.2 (2020-10-20)
 
 - Updated Chart.js to 2.9.4
