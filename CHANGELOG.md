@@ -1,6 +1,6 @@
 ## 4.0.0 (unreleased)
 
-- Removed support for Ruby < 2.6
+- Removed support for Ruby < 2.6 and Rails < 5.2
 
 ## 3.4.2 (2020-10-20)
 
