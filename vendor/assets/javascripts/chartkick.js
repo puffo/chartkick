@@ -2495,6 +2495,10 @@
     document.addEventListener("turbolinks:before-render", function() {
       Chartkick.destroyAll();
     });
+    // clean up previous charts before Turbo loads new page
+    document.addEventListener("turbo:before-render", function() {
+      Chartkick.destroyAll();
+    });
 
     // use setTimeout so charting library can come later in same JS file
     setTimeout(function() {

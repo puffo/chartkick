@@ -107,7 +107,7 @@ module Chartkick
 
       warn "[chartkick] The defer option is no longer needed and can be removed" if defer
 
-      # Turbolinks preview restores the DOM except for painted <canvas>
+      # Turbo / Turbolinks preview restores the DOM except for painted <canvas>
       # since it uses cloneNode(true) - https://developer.mozilla.org/en-US/docs/Web/API/Node/
       #
       # don't rerun JS on preview to prevent
@@ -117,6 +117,7 @@ module Chartkick
         <script#{nonce_html}>
           (function() {
             if (document.documentElement.hasAttribute("data-turbolinks-preview")) return;
+            if (document.documentElement.hasAttribute("data-turbo-preview")) return;
 
             var createChart = function() { #{createjs} };
             if ("Chartkick" in window) {
